@@ -1,22 +1,26 @@
 
 <template>
   <div class="content">
-    <Placeholder :title="title" />
+    <AppHeader :title="title" />
   </div>
 </template>
 
 <script>
-import Placeholder from "./Placeholder.vue";
+import AppHeader from "./AppHeader.vue";
+
 export default {
   name: "App",
   data() {
     return {
-      title: "Work In Progress..",
+      title: "Boolpress",
     };
   },
-  components: { Placeholder },
+  components: {
+    AppHeader,
+  },
 };
 </script>
 
 <style scoped>
+
 </style>
