@@ -2,24 +2,27 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
+          <!-- Rendo dinamici i link -->
+
+          <li v-for="link in links" :key="link.name" class="nav-item">
+            <router-link class="nav-link" :to="{ name: link.name }">{{ link.title }}
+            </router-link>
           </li>
+
           <!-- <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled">Disabled</a>
-      </li> -->
+            <router-link class="nav-link" to="/">Home</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/contacts">Contacts</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/about">About</router-link>
+          </li> -->
         </ul>
       </div>
     </nav>
@@ -28,7 +31,14 @@
 
 <script>
 export default {
-  name: "AppHeader",
+  name: "TheHeader",
+  data: () => ({
+    links: [
+      { name: "home", title: "Home" },
+      { name: "about", title: "About" },
+      { name: "contacts", title: "Contacts" },
+    ],
+  }),
   props: {
     title: String,
   },

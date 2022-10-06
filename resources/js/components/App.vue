@@ -2,6 +2,9 @@
 <template>
   <div class="content">
     <AppHeader :title="title" />
+    <main class="container mt-3">
+      lista post
+    </main>
   </div>
 </template>
 

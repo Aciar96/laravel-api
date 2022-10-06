@@ -1963,7 +1963,9 @@ var render = function render() {
     attrs: {
       title: _vm.title
     }
-  })], 1);
+  }), _vm._v(" "), _c("main", {
+    staticClass: "container mt-3"
+  }, [_vm._v("\n    lista post\n  ")])], 1);
 };
 
 var staticRenderFns = [];
@@ -1987,13 +1989,6 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _vm._m(0);
-};
-
-var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
   return _c("header", [_c("nav", {
     staticClass: "navbar navbar-expand-lg navbar-dark bg-dark"
   }, [_c("a", {
@@ -2001,7 +1996,14 @@ var staticRenderFns = [function () {
     attrs: {
       href: "#"
     }
-  }, [_vm._v("Navbar")]), _vm._v(" "), _c("button", {
+  }, [_vm._v(_vm._s(_vm.title))]), _vm._v(" "), _vm._m(0), _vm._v(" "), _vm._m(1)])]);
+};
+
+var staticRenderFns = [function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("button", {
     staticClass: "navbar-toggler",
     attrs: {
       type: "button",
@@ -2013,7 +2015,12 @@ var staticRenderFns = [function () {
     }
   }, [_c("span", {
     staticClass: "navbar-toggler-icon"
-  })]), _vm._v(" "), _c("div", {
+  })]);
+}, function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
     staticClass: "collapse navbar-collapse",
     attrs: {
       id: "navbarNav"
@@ -2027,7 +2034,7 @@ var staticRenderFns = [function () {
     attrs: {
       href: "#"
     }
-  }, [_vm._v("Home")])])])])])]);
+  }, [_vm._v("Home")])])])]);
 }];
 render._withStripped = true;
 
