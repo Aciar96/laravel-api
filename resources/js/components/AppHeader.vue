@@ -31,7 +31,7 @@
 
 <script>
 export default {
-  name: "TheHeader",
+  name: "AppHeader",
   data: () => ({
     links: [
       { name: "home", title: "Home" },
