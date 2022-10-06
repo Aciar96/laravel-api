@@ -1935,6 +1935,20 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "AppHeader",
+  data: function data() {
+    return {
+      links: [{
+        name: "home",
+        title: "Home"
+      }, {
+        name: "about",
+        title: "About"
+      }, {
+        name: "contacts",
+        title: "Contacts"
+      }]
+    };
+  },
   props: {
     title: String
   }
@@ -1996,7 +2010,26 @@ var render = function render() {
     attrs: {
       href: "#"
     }
-  }, [_vm._v(_vm._s(_vm.title))]), _vm._v(" "), _vm._m(0), _vm._v(" "), _vm._m(1)])]);
+  }, [_vm._v("Navbar")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c("div", {
+    staticClass: "collapse navbar-collapse",
+    attrs: {
+      id: "navbarNav"
+    }
+  }, [_c("ul", {
+    staticClass: "navbar-nav"
+  }, _vm._l(_vm.links, function (link) {
+    return _c("li", {
+      key: link.name,
+      staticClass: "nav-item"
+    }, [_c("router-link", {
+      staticClass: "nav-link",
+      attrs: {
+        to: {
+          name: link.name
+        }
+      }
+    }, [_vm._v(_vm._s(link.title) + "\n          ")])], 1);
+  }), 0)])])]);
 };
 
 var staticRenderFns = [function () {
@@ -2008,33 +2041,11 @@ var staticRenderFns = [function () {
     attrs: {
       type: "button",
       "data-toggle": "collapse",
-      "data-target": "#navbarNav",
-      "aria-controls": "navbarNav",
-      "aria-expanded": "false",
-      "aria-label": "Toggle navigation"
+      "data-target": "#navbarNav"
     }
   }, [_c("span", {
     staticClass: "navbar-toggler-icon"
   })]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
-    staticClass: "collapse navbar-collapse",
-    attrs: {
-      id: "navbarNav"
-    }
-  }, [_c("ul", {
-    staticClass: "navbar-nav"
-  }, [_c("li", {
-    staticClass: "nav-item active"
-  }, [_c("a", {
-    staticClass: "nav-link",
-    attrs: {
-      href: "#"
-    }
-  }, [_vm._v("Home")])])])]);
 }];
 render._withStripped = true;
 
